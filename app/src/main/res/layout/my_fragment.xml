@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="view"
+            type="com.aa.speedviewtest.MyFragment" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sv_withTremble:false"
+                android:textSize="24sp" />
+
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/speedView"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                app:sv_centerCircleColor="@color/black"
+                app:sv_centerCircleRadius="5dp"
+                app:sv_endDegree="360"
+                app:sv_indicator="KiteIndicator"
+                app:sv_indicatorColor="@color/black"
+                app:sv_indicatorWidth="4dp"
+                app:sv_markColor="@color/black"
+                app:sv_markStyle="ROUND"
+                app:sv_markWidth="1dp"
+                app:sv_marksNumber="3"
+                app:sv_maxSpeed="100"
+                app:sv_minSpeed="0"
+                app:sv_speedTextColor="@android:color/transparent"
+                app:sv_speedometerMode="TOP"
+                app:sv_startDegree="180"
+                app:sv_tickNumber="5"
+                app:sv_tickPadding="-12dp"
+                app:sv_trembleDegree="1"
+                app:sv_trembleDuration="250"
+                app:sv_unit="%"
+                app:sv_unitTextColor="@android:color/transparent"
+                app:sv_withTremble="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{view.score.toString()}"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                tools:text="45" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sv_withTremble:true"
+                android:textSize="24sp" />
+
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/speedView2"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="12dp"
+                app:sv_centerCircleColor="@color/black"
+                app:sv_centerCircleRadius="5dp"
+                app:sv_endDegree="360"
+                app:sv_indicator="KiteIndicator"
+                app:sv_indicatorColor="@color/black"
+                app:sv_indicatorWidth="4dp"
+                app:sv_markColor="@color/black"
+                app:sv_markStyle="ROUND"
+                app:sv_markWidth="1dp"
+                app:sv_marksNumber="3"
+                app:sv_maxSpeed="100"
+                app:sv_minSpeed="0"
+                app:sv_speedTextColor="@android:color/transparent"
+                app:sv_speedometerMode="TOP"
+                app:sv_startDegree="180"
+                app:sv_tickNumber="5"
+                app:sv_tickPadding="-12dp"
+                app:sv_trembleDegree="1"
+                app:sv_trembleDuration="250"
+                app:sv_unit="%"
+                app:sv_unitTextColor="@android:color/transparent"
+                app:sv_withTremble="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{view.score2.toString()}"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                tools:text="45" />
+
+            <Button
+                android:id="@+id/speedTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed To 100" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+
